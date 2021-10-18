@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from dailyshop import views
+from dailyshop import views as d_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',views.home)
+    path('home/',views.home,name='home'),
+
+    path('register/',views.register_page_login, name='register'),
+    path('login/',views.login_page, name='login'),
 ]

@@ -4075,7 +4075,8 @@
               &times;
             </button>
             <h4>Login or Register</h4>
-            <form class="aa-login-form" action="">
+            <form class="aa-login-form" action="" method="POST">
+                {% csrf_token %}
               <label for="">Username or Email address<span>*</span></label>
               <input type="text" placeholder="Username or email" />
               <label for="">Password<span>*</span></label>
